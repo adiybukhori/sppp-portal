@@ -21,7 +21,6 @@ async function login() {
 setLoading(true);
 setError("");
 
-```
 try {
   const res = await fetch(API_URL + "?action=login&ic=" + encodeURIComponent(ic));
   const data = await res.json();
@@ -38,7 +37,6 @@ try {
 } finally {
   setLoading(false);
 }
-```
 
 }
 
@@ -51,7 +49,6 @@ setError("");
 if (!student) {
 return ( <div style={styles.loginPage}> <div style={styles.loginCard}> <div style={styles.logo}>🎓</div> <h1>IUC Student Portal</h1> <p style={styles.muted}>Academic Progress & Fee Status</p>
 
-```
       <label>IC / Passport Number</label>
       <input
         style={styles.input}
@@ -71,7 +68,6 @@ return ( <div style={styles.loginPage}> <div style={styles.loginCard}> <div styl
     </div>
   </div>
 );
-```
 
 }
 
@@ -88,7 +84,6 @@ const paymentStatus = student["Payment Status"];
 
 return ( <div style={styles.page}> <header style={styles.header}> <div> <p style={styles.headerSmall}>Innovative University College</p> <h1 style={styles.headerTitle}>Student Progress & Payment Portal</h1> </div> <button style={styles.logoutBtn} onClick={logout}>Logout</button> </header>
 
-```
   <main style={styles.container}>
     <div style={styles.quickGrid}>
       <a style={styles.quickPrimary} href={student["Student Portal Link"] || "#"} target="_blank">🌐 Student Portal</a>
@@ -219,7 +214,6 @@ return ( <div style={styles.page}> <header style={styles.header}> <div> <p style
     </div>
   </main>
 </div>
-```
 
 );
 }
