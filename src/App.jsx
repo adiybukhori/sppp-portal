@@ -189,12 +189,12 @@ Logout </Button> </div> </div>
     </div>
 
     {isBlocked && (
-      <Card className="rounded-3xl border border-amber-300 bg-amber-100 shadow-sm">
+      <Card className="rounded-3xl border border-amber-300 bg-amber-50 shadow-sm">
         <CardContent className="p-5 flex gap-4 items-center bg-transparent">
           <span className="text-2xl">⚠️</span>
           <div>
             <h3 className="font-bold text-amber-900">LMS Access Notice</h3>
-            <p className="text-sm text-amber-800">Your LMS access is currently blocked. Please settle the outstanding amount or contact the Registry/Bursar Office for assistance.</p>
+            <p className="text-sm text-amber-700">Your LMS access is currently blocked. Please settle the outstanding amount or contact the Program Coordinator for assistance.</p>
           </div>
         </CardContent>
       </Card>
