@@ -42,7 +42,6 @@ const [loading, setLoading] = useState(false);
 const fee = useMemo(() => {
 if (!student) return null;
 
-```
 const taken = Number(student["Subject Taken"] || 0);
 const ongoing = Number(student["Subject Ongoing"] || 0);
 const notYet = Number(student["Subject Not Yet"] || 0);
@@ -63,7 +62,6 @@ return {
   ongoingPercent: Math.round((ongoing / totalSubjects) * 100),
   progressPercent: Math.round(((taken + ongoing) / totalSubjects) * 100)
 };
-```
 
 }, [student, subjects]);
 
@@ -71,7 +69,6 @@ async function login() {
 setLoading(true);
 setError("");
 
-```
 try {
   const res = await fetch(API_URL + "?action=login&ic=" + encodeURIComponent(ic));
   const data = await res.json();
@@ -90,14 +87,12 @@ try {
 } finally {
   setLoading(false);
 }
-```
 
 }
 
 if (!loggedIn || !student || !fee) {
 return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 flex items-center justify-center p-6"> <Card className="w-full max-w-md rounded-3xl shadow-2xl border-white/10 bg-white/95"> <CardContent className="p-8"> <div className="flex items-center gap-3 mb-6"> <div className="h-12 w-12 rounded-2xl bg-blue-950 text-white flex items-center justify-center"> <span className="text-2xl">🎓</span> </div> <div> <h1 className="text-xl font-bold text-slate-900">IUC Student Portal</h1> <p className="text-sm text-slate-500">Academic Progress & Fee Status</p> </div> </div>
 
-```
         <div className="space-y-4">
           <div>
             <label className="text-sm font-medium text-slate-700">IC / Passport Number</label>
@@ -121,7 +116,6 @@ return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-
     </Card>
   </div>
 );
-```
 
 }
 
@@ -131,7 +125,6 @@ return ( <div className="min-h-screen bg-slate-100"> <div className="bg-gradient
 <Button variant="secondary" onClick={() => setLoggedIn(false)} className="rounded-2xl">
 Logout </Button> </div> </div>
 
-```
   <main className="max-w-6xl mx-auto p-6 space-y-6">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       <a href={student["Student Portal Link"] || "#"} target="_blank" className="rounded-2xl bg-slate-900 hover:bg-slate-800 text-white text-center py-3 font-semibold">🌐 Student Portal</a>
@@ -312,7 +305,6 @@ Logout </Button> </div> </div>
     </div>
   </main>
 </div>
-```
 
 );
 }
