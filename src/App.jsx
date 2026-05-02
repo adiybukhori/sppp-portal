@@ -127,10 +127,10 @@ Logout </Button> </div> </div>
 
   <main className="max-w-6xl mx-auto p-6 space-y-6">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <a href={student["Student Portal Link"] || "#"} target="_blank" className="rounded-2xl bg-slate-900 hover:bg-slate-800 text-white text-center py-3 font-semibold">🌐 Student Portal</a>
-      <a href={student["LMS Link"] || "#"} target="_blank" className="rounded-2xl border bg-white hover:bg-slate-50 text-center py-3 font-semibold">📘 LMS (Moodle)</a>
-      <a href={student["Schedule Link"] || "#"} target="_blank" className="rounded-2xl border bg-white hover:bg-slate-50 text-center py-3 font-semibold">📅 Class Schedule</a>
-      <a href={student["Complaint Form Link"] || "#"} target="_blank" className="rounded-2xl border bg-white hover:bg-slate-50 text-center py-3 font-semibold">📝 Complaint Form</a>
+      <a href={student["Student Portal Link"] || "#"} target="_blank" className="rounded-full bg-slate-900 hover:bg-slate-800 text-white text-center py-3 px-6 font-semibold shadow-md">🌐 Student Portal</a>
+      <a href={student["LMS Link"] || "#"} target="_blank" className="rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-center py-3 px-6 font-semibold shadow-sm">📘 LMS (Moodle)</a>
+      <a href={student["Schedule Link"] || "#"} target="_blank" className="rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-center py-3 px-6 font-semibold shadow-sm">📅 Class Schedule</a>
+      <a href={student["Complaint Form Link"] || "#"} target="_blank" className="rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-center py-3 px-6 font-semibold shadow-sm">📝 Complaint Form</a>
     </div>
 
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
