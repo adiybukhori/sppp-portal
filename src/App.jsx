@@ -171,7 +171,13 @@ Logout </Button> </div> </div>
           </div>
 
           <div className="mt-5 space-y-2">
-            className="block w-full rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-center py-2 px-4 text-xs font-semibold shadow-sm"🌐 View in Student Portal</a>
+            <a
+            href={student["Student Portal Link"] || "#"}
+            target="_blank"
+            className="block w-full rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-center py-2 px-4 text-xs font-semibold shadow-sm"
+          >
+            🌐 View in Student Portal
+          </a>
             <span className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${fee.paymentStatus === "Clear" ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>{fee.paymentStatus}</span>
           </div>
 
