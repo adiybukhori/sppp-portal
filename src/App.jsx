@@ -251,12 +251,11 @@ Logout </Button> </div> </div>
                       <div className="font-semibold text-slate-900">{subject.subjectCode}</div>
                       <div className="text-slate-500">{subject.subjectName}</div>
                     </td>
-                    <td className="p-4"><span className={statusBadge(subject.status)}>{subject.status}</span></td>
+                    <td className="p-4">
+                      <span className={statusBadge(subject.status)}>{subject.status}</span>
+                    </td>
                   </tr>
                 ))}
-              </tbody>
-            </table>
-          </div>
 
           <p className="text-xs text-slate-500 mt-3">* Result, marks, GPA/CGPA and detailed academic records are available in the Student Portal (Sky Vialing).</p>
           <div className="mt-3 flex gap-2">
