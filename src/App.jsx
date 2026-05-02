@@ -189,7 +189,7 @@ Logout </Button> </div> </div>
     </div>
 
     {isBlocked && (
-      <Card className="rounded-3xl border border-amber-300 !bg-amber-100 shadow-sm">
+      <Card className="rounded-3xl border border-amber-300 bg-amber-100 shadow-sm">
         <CardContent className="p-5 flex gap-4 items-center bg-transparent">
           <span className="text-2xl">⚠️</span>
           <div>
