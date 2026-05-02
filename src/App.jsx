@@ -266,8 +266,8 @@ Logout </Button> </div> </div>
 
           <p className="text-xs text-slate-500 mt-3">* Result, marks, GPA/CGPA and detailed academic records are available in the Student Portal (Sky Vialing).</p>
           <div className="mt-3 flex gap-2">
-            <a href={student["Student Portal Link"] || "#"} target="_blank" className="rounded-xl text-xs border px-3 py-2 hover:bg-slate-50">🌐 Open Portal</a>
-            <a href={student["Schedule Link"] || "#"} target="_blank" className="rounded-xl text-xs border px-3 py-2 hover:bg-slate-50">📅 View Schedule</a>
+            <a href={student["Student Portal Link"] || "#"} target="_blank" className="rounded-full text-xs border border-slate-200 bg-white px-4 py-2 hover:bg-slate-50 shadow-sm">🌐 Open Portal</a>
+            <a href={student["Schedule Link"] || "#"} target="_blank" className="rounded-full text-xs border border-slate-200 bg-white px-4 py-2 hover:bg-slate-50 shadow-sm">📅 View Schedule</a>
           </div>
         </CardContent>
       </Card>
