@@ -10,7 +10,11 @@
 "react": "latest",
 "react-dom": "latest",
 "tailwindcss": "latest",
-"@tailwindcss/vite": "latest"
+"@tailwindcss/vite": "latest",
+"@radix-ui/react-slot": "latest",
+"class-variance-authority": "latest",
+"clsx": "latest",
+"tailwind-merge": "latest"
 },
 "devDependencies": {}
 }
