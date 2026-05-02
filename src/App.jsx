@@ -23,7 +23,7 @@ setError("");
 
 ```
 try {
-  const res = await fetch(`${API_URL}?action=login&ic=${encodeURIComponent(ic)}`);
+  const res = await fetch(API_URL + "?action=login&ic=" + encodeURIComponent(ic));
   const data = await res.json();
 
   if (!data.success) {
