@@ -189,8 +189,8 @@ Logout </Button> </div> </div>
     </div>
 
     {isBlocked && (
-      <Card className="rounded-3xl border-amber-200 bg-amber-50 shadow-sm">
-        <CardContent className="p-5 flex gap-3 items-start">
+      <Card className="rounded-3xl border border-amber-300 bg-amber-50 shadow-sm">
+        <CardContent className="p-5 flex gap-4 items-center">
           <span className="text-2xl">⚠️</span>
           <div>
             <h3 className="font-bold text-amber-900">LMS Access Notice</h3>
