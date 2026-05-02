@@ -310,13 +310,12 @@ Logout </Button> </div> </div>
 }
 
 function Info({ label, value, danger }) {
-return ( <div className="rounded-2xl bg-slate-50 p-4"> <p className="text-xs text-slate-500">{label}</p>
-<p className={`font-bold mt-1 ${danger ? "text-red-600" : "text-slate-900"}`}>{value}</p> </div>
-);
-}
-
-function Row({ label, value, strong, danger }) {
-return ( <div className="flex justify-between gap-4"> <span className="text-slate-500">{label}</span>
-<span className={`${strong ? "font-bold" : "font-medium"} ${danger ? "text-red-600" : "text-slate-900"}`}>{value}</span> </div>
-);
+  return (
+    <div className="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm hover:shadow-md transition">
+      <p className="text-xs text-slate-500">{label}</p>
+      <p className={`font-semibold mt-1 ${danger ? "text-red-600" : "text-slate-900"}`}>
+        {value}
+      </p>
+    </div>
+  );
 }
