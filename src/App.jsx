@@ -311,11 +311,9 @@ Logout </Button> </div> </div>
 
 function Info({ label, value, danger }) {
   return (
-    <div className="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm hover:shadow-md transition">
+    <div className="rounded-2xl bg-slate-50 p-4">
       <p className="text-xs text-slate-500">{label}</p>
-      <p className={`font-semibold mt-1 ${danger ? "text-red-600" : "text-slate-900"}`}>
-        {value}
-      </p>
+      <p className={`font-bold mt-1 ${danger ? "text-red-600" : "text-slate-900"}`}>{value}</p>
     </div>
   );
 }
