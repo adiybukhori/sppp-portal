@@ -319,3 +319,14 @@ function Info({ label, value, danger }) {
     </div>
   );
 }
+
+function Row({ label, value, strong, danger }) {
+  return (
+    <div className="flex justify-between gap-4">
+      <span className="text-slate-500">{label}</span>
+      <span className={`${strong ? "font-bold" : "font-medium"} ${danger ? "text-red-600" : "text-slate-900"}`}>
+        {value}
+      </span>
+    </div>
+  );
+}
