@@ -171,7 +171,7 @@ Logout </Button> </div> </div>
           </div>
 
           <div className="mt-5 space-y-2">
-            <a href={student["Student Portal Link"] || "#"} target="_blank" className="block w-full rounded-xl border text-center py-2 text-xs font-semibold hover:bg-slate-50">🌐 View in Student Portal</a>
+            className="block w-full rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-center py-2 px-4 text-xs font-semibold shadow-sm"🌐 View in Student Portal</a>
             <span className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${fee.paymentStatus === "Clear" ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>{fee.paymentStatus}</span>
           </div>
 
@@ -202,7 +202,7 @@ Logout </Button> </div> </div>
             <h3 className="font-bold text-lg">Academic Progress</h3>
           </div>
 
-          <div className="mb-6 rounded-3xl bg-slate-50 border p-5">
+          <div className="mb-6 rounded-3xl bg-slate-50 border border-slate-200 p-5 shadow-sm">
             <div className="flex items-center justify-between mb-3">
               <div>
                 <p className="text-sm text-slate-500">Overall Academic Progress</p>
@@ -221,24 +221,24 @@ Logout </Button> </div> </div>
             </div>
 
             <div className="mt-4 grid grid-cols-3 gap-3 text-center text-sm">
-              <div className="rounded-2xl bg-white p-3 border">
+              <div className="rounded-2xl bg-white p-3 border border-slate-200 shadow-sm">
                 <p className="font-bold text-emerald-700">{fee.taken}</p>
                 <p className="text-xs text-slate-500">Completed</p>
               </div>
-              <div className="rounded-2xl bg-white p-3 border">
+              <div className="rounded-2xl bg-white p-3 border border-slate-200 shadow-sm">
                 <p className="font-bold text-blue-700">{fee.ongoing}</p>
                 <p className="text-xs text-slate-500">Ongoing</p>
               </div>
-              <div className="rounded-2xl bg-white p-3 border">
+              <div className="rounded-2xl bg-white p-3 border border-slate-200 shadow-sm">
                 <p className="font-bold text-slate-600">{fee.notYet}</p>
                 <p className="text-xs text-slate-500">Not Yet</p>
               </div>
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border bg-white">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             <table className="w-full text-sm">
-              <thead className="bg-slate-50 text-slate-600">
+              <thead className="bg-slate-50 text-slate-600 border-b border-slate-200">
                 <tr>
                   <th className="text-left p-4">Subject</th>
                   <th className="text-left p-4 w-36">Status</th>
@@ -246,7 +246,7 @@ Logout </Button> </div> </div>
               </thead>
               <tbody>
                 {subjects.map((subject) => (
-                  <tr key={subject.subjectCode} className="border-t">
+                  <tr key={subject.subjectCode} className="border-t border-slate-200">
                     <td className="p-4">
                       <div className="font-semibold text-slate-900">{subject.subjectCode}</div>
                       <div className="text-slate-500">{subject.subjectName}</div>
@@ -296,8 +296,8 @@ Logout </Button> </div> </div>
 
         <Card className="rounded-3xl shadow-sm">
           <CardContent className="p-6 space-y-3">
-            <a href={student["Payment Link"] || "#"} target="_blank" className="block w-full rounded-2xl bg-blue-950 hover:bg-blue-900 text-white text-center py-3 font-semibold">Pay Outstanding Now</a>
-            <a href={student["WhatsApp PIC Link"] || "#"} target="_blank" className="block w-full rounded-2xl border text-center py-3 font-semibold hover:bg-slate-50">💬 Contact Admin</a>
+            <a href={student["Payment Link"] || "#"} target="_blank" className="block w-full rounded-full bg-blue-950 hover:bg-blue-900 text-white text-center py-3 px-6 font-semibold shadow-md">Pay Outstanding Now</a>
+            <a href={student["WhatsApp PIC Link"] || "#"} target="_blank" className="block w-full rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-center py-3 px-6 font-semibold shadow-sm">💬 Contact Admin</a>
             <p className="text-xs text-slate-500">Payment link can be connected to FPX/payment gateway later.</p>
           </CardContent>
         </Card>
