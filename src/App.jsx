@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzFcUH8XMXfUHZ-kSFfjFkzBen_lWL63Bdn0LyNAdb0_MmkLf74mTsulayQZm7LLZUX/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzlp0yP-NKtixeoBWAIusWCrVIOv7kJEzerrROuwBYxPpHRJaTElvEosqECBJseNjCR/exec";
 
 function money(n) {
 return new Intl.NumberFormat("en-MY", {
@@ -44,7 +44,7 @@ if (!student) return null;
 
 const taken = Number(student["Subject Taken"] || 0);
 const ongoing = Number(student["Subject Ongoing"] || 0);
-const notYet = Number(student["Subject Not Yet"] || 0);
+const notYet = Number(student["Subject Not Started"] || 0);
 const totalSubjects = taken + ongoing + notYet || subjects.length || 1;
 
 return {
@@ -217,7 +217,7 @@ Logout </Button> </div> </div>
               <div className="text-right text-sm text-slate-500">
                 <p>{fee.taken} completed</p>
                 <p>{fee.ongoing} ongoing</p>
-                <p>{fee.notYet} not yet</p>
+                <p>{fee.notYet} not Started</p>
               </div>
             </div>
 
@@ -237,7 +237,7 @@ Logout </Button> </div> </div>
               </div>
               <div className="rounded-2xl bg-white p-3 border border-slate-200 shadow-sm">
                 <p className="font-bold text-slate-600">{fee.notYet}</p>
-                <p className="text-xs text-slate-500">Not Yet</p>
+                <p className="text-xs text-slate-500">Not Started</p>
               </div>
             </div>
           </div>
