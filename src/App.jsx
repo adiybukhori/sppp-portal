@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzIKn93JeW3IJasycu5W3DLRz7Hm0NAfa5uXPbobBd4bawATnbdUTpQCTnefgDW3tj-/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzFcUH8XMXfUHZ-kSFfjFkzBen_lWL63Bdn0LyNAdb0_MmkLf74mTsulayQZm7LLZUX/exec";
 
 function money(n) {
 return new Intl.NumberFormat("en-MY", {
