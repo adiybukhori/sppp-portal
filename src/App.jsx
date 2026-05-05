@@ -34,6 +34,7 @@ function statusBadge(status) {
 
 export default function App() {
   const [ic, setIc] = useState("");
+  const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
   const [student, setStudent] = useState(null);
   const [subjects, setSubjects] = useState([]);
@@ -122,6 +123,17 @@ export default function App() {
       setError("Please enter IC/Passport number.");
       return;
     }
+  
+    if (!password.trim()) {
+      setError("Please enter password.");
+      return;
+    }
+  
+    if (password.trim() !== ic.trim()) {
+      setError("Invalid password. Use your IC/Passport number.");
+      return;
+    }
+  
     await loadByIc(ic);
   }
 
@@ -160,6 +172,19 @@ export default function App() {
                   className="mt-2"
                   placeholder="Enter IC / Passport number"
                 />
+                <div>
+                <label className="text-sm font-medium text-slate-700 mt-4 block">Password</label>
+                <Input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="mt-2"
+                  placeholder="Enter password"
+                />
+                <p className="text-xs text-slate-500 mt-1">
+                  Password is same as IC / Passport number
+                </p>
+              </div>
               </div>
 
               {error && <p className="text-sm text-red-600">{error}</p>}
@@ -195,6 +220,7 @@ export default function App() {
               setStudent(null);
               setSubjects([]);
               setIc("");
+              setPassword("");
               window.history.replaceState({}, document.title, window.location.pathname);
             }}
             className="rounded-2xl"
