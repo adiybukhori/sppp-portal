@@ -266,7 +266,6 @@ export default function App() {
               <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                 <Info label="Program" value={student["Program"]} />
                 <Info label="Intake" value={formatIntake(student["Intake"])} />
-                <Info label="Fee Group" value={student["Fee Group"]} />
                 <Info label="LMS" value={student["LMS Status"]} danger={isBlocked} />
                 <Info label="Category" value={student["Student Category"]} />
               </div>
